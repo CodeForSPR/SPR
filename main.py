@@ -136,9 +136,9 @@ for batch in range(total_batches):
         optimizer.zero_grad()
         metrics = spr.test_func()
         if batch != total_batches - 1:
-            print(batch, 'Test F1MT: {}, F1MA: {}, F1WT: {}, F1WT: {}, AUC: {}'.format(metrics[0], metrics[1], metrics[2], metrics[3], metrics[4]))
+            print(batch, 'Test F1MI: {}, F1MA: {}, F1WT: {}, F1BI: {}, AUC: {}'.format(metrics[0], metrics[1], metrics[2], metrics[3], metrics[4]))
         elif batch == total_batches - 1:
-            print(batch, 'LAST F1MT: {}, F1MA: {}, F1WT: {}, F1WT: {}, AUC: {}'.format(metrics[0], metrics[1], metrics[2], metrics[3], metrics[4]))
+            print(batch, 'LAST F1MI: {}, F1MA: {}, F1WT: {}, F1BI: {}, AUC: {}'.format(metrics[0], metrics[1], metrics[2], metrics[3], metrics[4]))
     sys.stdout.flush()
 print("Training done...", "\n", "-" * 50)
 print('Loading model at {}th epoch'.format(minimal_batch))
